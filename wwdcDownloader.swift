@@ -565,8 +565,8 @@ class wwdcVideosController {
 
         var downloadSlices = sliceURLs.map { DownloadSlice(source: $0, destination: videoUrl) }
 
-        if let audioPlaylistPath = getAudioPlaylistPath(fromPlaylist: newPlaylist),
-           let audioUrl = getAudioUrl(playlist: newPlaylist, baseUrl: tempUrl) {
+        if let audioPlaylistPath = getAudioPlaylistPath(fromPlaylist: playlist),
+           let audioUrl = getAudioUrl(playlist: playlist, baseUrl: tempUrl) {
 
             let audioSlicesUrl = playlistUrl.deletingLastPathComponent().appendingPathComponent(audioPlaylistPath)
             let audioBaseUrl = audioSlicesUrl.deletingLastPathComponent()
